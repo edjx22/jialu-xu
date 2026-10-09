@@ -2,10 +2,17 @@
 // Venue/status wording follows the owner's 2026-10-08 resume.
 export const profile = {
   name: 'Jialu Xu',
-  introduction: 'I am a MASc student in Electrical and Computer Engineering at the University of Waterloo, specializing in Pattern Analysis and Machine Intelligence. I received my BASc in Electrical Engineering from UWaterloo in 2025.',
+  introduction: 'I am an MASc student in Electrical and Computer Engineering at the University of Waterloo, specializing in Pattern Analysis and Machine Intelligence.',
+  priorEducation: 'I received my BASc in Electrical Engineering from UWaterloo in 2025.',
+  email: 'j565xu@uwaterloo.ca',
   interests: ['Novel View Synthesis (NeRF, 3DGS, Audio)', 'Image Processing (IQA, VQA, Enhancement)', 'AI (Harness Engineering, Audio World Models)'],
   photo: 'assets/portrait.jpg',
 };
+
+export const education = [
+  { degree: 'MASc', field: 'Electrical and Computer Engineering', detail: 'Pattern Analysis and Machine Intelligence', dates: 'Sep 2025 – Jun 2027' },
+  { degree: 'BASc', field: 'Electrical Engineering (Co-op)', detail: 'Honours–Distinction', dates: 'Sep 2020 – Jun 2025' },
+];
 
 export type Publication = {
   id: string; title: string; authors: string; venue: string; badge: string;

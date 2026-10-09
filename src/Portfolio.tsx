@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import GlassNavigation from './GlassNavigation';
-import { canis, coecho, profile, publications, simulations } from './content';
+import { canis, coecho, education, profile, publications, simulations } from './content';
 
 const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 function Authors({ text }: { text: string }) {
@@ -9,18 +9,28 @@ function Authors({ text }: { text: string }) {
 function Homepage() {
   return <>
     <section className="about section-width" aria-labelledby="about-title">
-      <div className="about-copy">
-        <h1 id="about-title">Jialu Xu</h1>
-        <p className="introduction">{profile.introduction}</p>
-        <div className="research-interests">
-          <h2>Research interests</h2>
-          <ul>{profile.interests.map(interest => <li key={interest}>{interest}</li>)}</ul>
+      <div className="about-main">
+        <div className="about-copy">
+          <h1 id="about-title">Jialu Xu</h1>
+          <p className="introduction">{profile.introduction} I am advised by <a href="https://uwaterloo.ca/electrical-computer-engineering/profile/z70wang" target="_blank" rel="noopener noreferrer">Prof. Zhou Wang</a> at the <a href="https://ivc.uwaterloo.ca/" target="_blank" rel="noopener noreferrer">IVC Lab</a>, and have also worked with <a href="https://uwaterloo.ca/electrical-computer-engineering/profile/achyu" target="_blank" rel="noopener noreferrer">Prof. Alfred Yu</a> at LITMUS. {profile.priorEducation}</p>
+          <div className="research-interests">
+            <h2>Research interests</h2>
+            <ul>{profile.interests.map(interest => <li key={interest}>{interest}</li>)}</ul>
+          </div>
+          <p className="contact-note">Interested in my research or a potential collaboration? Feel free to email me at <a href={`mailto:${profile.email}`}>{profile.email}</a>.</p>
+        </div>
+        <div className="portrait-wrap media-glass">
+          {profile.photo ? <img className="portrait" src={asset(profile.photo)} alt="Jialu Xu" /> :
+            <div className="portrait portrait-placeholder"><span className="portrait-caption">Photo to be added</span></div>}
         </div>
       </div>
-      <div className="portrait-wrap media-glass">
-        {profile.photo ? <img className="portrait" src={asset(profile.photo)} alt="Jialu Xu" /> :
-          <div className="portrait portrait-placeholder"><span className="portrait-caption">Photo to be added</span></div>}
-      </div>
+      <section className="education" aria-labelledby="education-title">
+        <div className="education-heading"><h2 id="education-title">Education</h2><p>University of Waterloo</p></div>
+        <div className="education-list">{education.map(item => <article className="education-entry" key={item.degree}>
+          <div className="education-meta"><span className="education-degree">{item.degree}</span><span className="education-dates">{item.dates}</span></div>
+          <h3>{item.field}</h3><p>{item.detail}</p>
+        </article>)}</div>
+      </section>
       <a className="scroll-cue" href="#publications"><span>Selected publications</span><span aria-hidden="true">↓</span></a>
     </section>
     <section className="publications section-width" id="publications" aria-labelledby="publication-title">
