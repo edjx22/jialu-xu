@@ -1,5 +1,5 @@
 // Edit this file to maintain the website's text, links, and project order.
-// Venue/status wording follows the owner's 2026-10-08 resume.
+// Venue/status wording follows the owner's 2026-10-09 resume.
 export const profile = {
   name: 'Jialu Xu',
   introduction: 'I am an MASc student in Electrical and Computer Engineering at the University of Waterloo, specializing in Pattern Analysis and Machine Intelligence.',
@@ -22,6 +22,13 @@ export const publications: Publication[] = [
   { id: 'aesthetic', title: 'Aesthetic Camera Viewpoint Suggestion with 3D Aesthetic Field', authors: 'Sheyang Tang, Armin Shafiee Sarvestani, Jialu Xu, Xiaoyu Xu, and Zhou Wang', venue: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition', badge: 'CVPR', year: '2026', image: 'assets/aesthetic.jpg', links: [{ label: 'Paper', href: 'https://arxiv.org/abs/2602.20363' }] },
   { id: 'rendu', title: 'Rendu: A Physics-Grounded Simulation Platform for Spatial Acoustic Learning', authors: 'Jialu Xu', venue: 'ECCV MUST-CV Workshop', badge: 'ECCV Workshop', year: '2026', status: 'Full version submitted to CVPR 2027', image: 'assets/rendu.jpg', links: [{ label: 'PDF', href: 'papers/rendu.pdf' }] },
   { id: 'ius', title: 'Tunable B-mode Despeckling via Image Saliency and Adaptive Stochastic Resampling', authors: 'Jialu Xu, Di Xiao, Alfred Yu, and Zhou Wang', venue: 'IEEE International Ultrasonics Symposium', badge: 'IUS', year: '2026', image: 'assets/ius.jpg', links: [{ label: 'PDF', href: 'papers/ius.pdf' }] },
+];
+
+export const ongoingResearch = [
+  { id: 'hdr', title: 'Prior-Guided Single-Exposure HDR Novel View Synthesis via Base-Gain Representation', authors: 'Armin Shafiee Sarvestani, Sheyang Tang, Jialu Xu, and Zhou Wang', status: 'Submitted to ICLR 2027' },
+  { id: 'iqa', title: 'Unifying Image Quality Assessment Datasets', authors: 'Wenbo Yang, Zhongling Wang, Jialu Xu, Jinghan Zhou, and Zhou Wang', status: 'Submitted to ICASSP 2027' },
+  { id: 'pfc', title: 'Prevention, Not Correction: False Premises Contaminate Representations Before AI Agent Answers', authors: 'Jialu Xu', status: 'Submitted to the NeurIPS 2026 Workshop on Interpreting Agent Behavior (IAB)' },
+  { id: 'monde', title: 'Monde: Acoustic Transport World Model', authors: 'Jialu Xu', status: 'Submitted to ICASSP' },
 ];
 
 // Names and descriptions from the owner's HornSuite asset bundle (2026-10-08).

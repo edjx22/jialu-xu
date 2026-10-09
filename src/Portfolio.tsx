@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import GlassNavigation from './GlassNavigation';
-import { canis, coecho, education, profile, publications, simulations } from './content';
+import { canis, coecho, education, ongoingResearch, profile, publications, simulations } from './content';
 
 const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 function Authors({ text }: { text: string }) {
@@ -12,7 +12,7 @@ function Homepage() {
       <div className="about-main">
         <div className="about-copy">
           <h1 id="about-title">Jialu Xu</h1>
-          <p className="introduction">{profile.introduction} I am advised by <a href="https://uwaterloo.ca/electrical-computer-engineering/profile/z70wang" target="_blank" rel="noopener noreferrer">Prof. Zhou Wang</a> at the <a href="https://ivc.uwaterloo.ca/" target="_blank" rel="noopener noreferrer">IVC Lab</a>, and have also worked with <a href="https://uwaterloo.ca/electrical-computer-engineering/profile/achyu" target="_blank" rel="noopener noreferrer">Prof. Alfred Yu</a> at LITMUS. {profile.priorEducation}</p>
+          <p className="introduction">{profile.introduction} I am advised by <a href="https://uwaterloo.ca/electrical-computer-engineering/profile/z70wang" target="_blank" rel="noopener noreferrer">Prof. Zhou Wang</a> at the <a href="https://ivc.uwaterloo.ca/" target="_blank" rel="noopener noreferrer">IVC Lab</a>, and have also worked with <a href="https://uwaterloo.ca/electrical-computer-engineering/profile/achyu" target="_blank" rel="noopener noreferrer">Prof. Alfred Yu</a> at <a href="https://lit-mus.org/" target="_blank" rel="noopener noreferrer">LITMUS</a>. {profile.priorEducation}</p>
           <div className="research-interests">
             <h2>Research interests</h2>
             <ul>{profile.interests.map(interest => <li key={interest}>{interest}</li>)}</ul>
@@ -31,10 +31,10 @@ function Homepage() {
           <h3>{item.field}</h3><p>{item.detail}</p>
         </article>)}</div>
       </section>
-      <a className="scroll-cue" href="#publications"><span>Selected publications</span><span aria-hidden="true">↓</span></a>
+      <a className="scroll-cue" href="#publications"><span>Selected Publications</span><span aria-hidden="true">↓</span></a>
     </section>
     <section className="publications section-width" id="publications" aria-labelledby="publication-title">
-      <div className="section-heading"><h2 id="publication-title">Selected publications</h2></div>
+      <div className="section-heading"><h2 id="publication-title">Selected Publications</h2></div>
       <div className="publication-list">{publications.map(publication => <article className="publication" key={publication.id}>
         <div className="publication-visual">
           <span className="venue-badge">{publication.badge}</span>
@@ -48,6 +48,17 @@ function Homepage() {
           {publication.links.length > 0 && <div className="paper-links">{publication.links.map(link => <a className="paper-link" key={link.label} href={link.href.startsWith('http') ? link.href : asset(link.href)} target="_blank" rel="noopener noreferrer">{link.label}<span aria-hidden="true">↗</span></a>)}</div>}
         </div>
       </article>)}</div>
+      <details className="all-research">
+        <summary><span>All Research</span><span className="all-research-chevron" aria-hidden="true">↗</span></summary>
+        <div className="all-research-content">
+          <p className="all-research-caption">Research in submission</p>
+          {ongoingResearch.map(research => <article className="research-entry" key={research.id}>
+            <h3>{research.title}</h3>
+            <p className="authors"><Authors text={research.authors} /></p>
+            <p className="publication-status">{research.status}</p>
+          </article>)}
+        </div>
+      </details>
     </section>
   </>;
 }
