@@ -25,7 +25,7 @@ function Homepage() {
         </div>
       </div>
       <section className="education" aria-labelledby="education-title">
-        <div className="education-heading"><h2 id="education-title">Education</h2><p>University of Waterloo</p></div>
+        <div className="education-heading"><h2 id="education-title">Education</h2><img className="education-logo" src={asset('assets/uwaterloo-logo.png')} alt="University of Waterloo" width="210" height="84" /></div>
         <div className="education-list">{education.map(item => <article className="education-entry" key={item.degree}>
           <div className="education-meta"><span className="education-degree">{item.degree}</span><span className="education-dates">{item.dates}</span></div>
           <h3>{item.field}</h3><p>{item.detail}</p>

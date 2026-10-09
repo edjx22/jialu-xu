@@ -11,7 +11,7 @@ export const profile = {
 
 export const education = [
   { degree: 'MASc', field: 'Electrical and Computer Engineering', detail: 'Pattern Analysis and Machine Intelligence', dates: 'Sep 2025 – Jun 2027' },
-  { degree: 'BASc', field: 'Electrical Engineering (Co-op)', detail: 'Honours–Distinction', dates: 'Sep 2020 – Jun 2025' },
+  { degree: 'BASc', field: 'Electrical Engineering (Co-op)', detail: 'Honours–Distinction · Communication and Signal Processing Specialization', dates: 'Sep 2020 – Jun 2025' },
 ];
 
 export type Publication = {
