@@ -2,7 +2,7 @@
 // Venue/status wording follows the owner's 2026-10-08 resume.
 export const profile = {
   name: 'Jialu Xu',
-  introduction: 'I earned my BASc (Honours–Distinction) in Electrical Engineering from UWaterloo in 2025 and am now pursuing an MASc in Electrical and Computer Engineering, specializing in Pattern Analysis and Machine Intelligence.',
+  introduction: 'I am a MASc student in Electrical and Computer Engineering at the University of Waterloo, specializing in Pattern Analysis and Machine Intelligence. I received my BASc in Electrical Engineering from UWaterloo in 2025.',
   interests: ['Novel View Synthesis (NeRF, 3DGS, Audio)', 'Image Processing (IQA, VQA, Enhancement)', 'AI (Harness Engineering, Audio World Models)'],
   photo: 'assets/portrait.jpg',
 };
