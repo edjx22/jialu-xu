@@ -12,9 +12,18 @@ pnpm dev
 
 ## Deployment
 
-The GitHub Pages workflow builds the site from this repository and publishes
-`dist/` whenever `main` is updated; it can also be run manually from the
-Actions tab. The hash routes are `#/` and `#/projects`.
+The primary site is [jialu-xu.pages.dev](https://jialu-xu.pages.dev/), a
+Cloudflare Pages Direct Upload project with no Git provider. To publish a local
+change, use an authenticated Cloudflare Wrangler session:
+
+```sh
+pnpm build
+npx --yes wrangler@latest pages deploy dist --project-name=jialu-xu --branch=main
+```
+
+No GitHub push is required. The existing GitHub Pages workflow still publishes
+the older GitHub-hosted URL when `main` is pushed there. The site uses hash
+routes `#/` and `#/projects` on both hosts.
 
 ## Attribution
 

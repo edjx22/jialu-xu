@@ -155,14 +155,19 @@ h1, h2, h3, p { margin: 0; }
 .simulation-caption a { display: inline-block; color: var(--accent); font-size: 14px; margin-top: 10px; }
 .coecho-section { padding: 98px 0 55px; margin-top: 82px; border-top: 1px solid var(--line); }
 .coecho-copy { max-width: 720px; margin-bottom: 44px; }
+.coecho-organization { display: inline-flex; align-items: center; gap: 13px; width: fit-content; color: #71675a; transition: color .2s ease; }
+.coecho-organization:hover { color: #3e3831; }
+.labo-logo { display: block; width: 108px; height: auto; }
+.coecho-organization > span:nth-child(2) { font-size: 11px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+.organization-arrow { font-size: 15px; line-height: 1; }
 .coecho-title { display: flex; align-items: center; gap: 18px; margin: 16px 0 24px; }
 .coecho-logo { width: 64px; height: 64px; flex-shrink: 0; }
 .coecho-copy h2 { font-size: 44px; font-weight: 500; letter-spacing: -.035em; margin: 0; }
 .coecho-copy h2 span { color: var(--accent); }
 .coecho-description { font-size: 19px; line-height: 1.8; color: #676055; }
 .coecho-support { font-size: 14px; color: #8a7e6b; margin-top: 24px; line-height: 1.7; }
-.coecho-product { border-radius: 14px; overflow: hidden; }
-.coecho-product img { width: 100%; display: block; border-radius: 14px; }
+.coecho-product { position: relative; aspect-ratio: 1.6; border-radius: 20px; overflow: hidden; background: #080808; box-shadow: 0 16px 35px #3b352a16; }
+.coecho-product img { position: absolute; top: 50%; left: 50%; width: 108%; max-width: none; height: auto; display: block; transform: translate(-50%, -50%); }
 .canis-section { padding: 86px 0 70px; margin-top: 74px; border-top: 1px solid var(--line); }
 .canis-copy { max-width: 760px; margin-bottom: 42px; }
 .canis-title { display: flex; align-items: center; gap: 18px; margin: 16px 0 24px; }
@@ -203,7 +208,7 @@ h1, h2, h3, p { margin: 0; }
   .simulation-glass-window::before { inset: 2px; border-radius: 15px; }
   .simulation-glass-window img { border-radius: 9px; }
   .pending-project { grid-template-columns: 94px 1fr; gap: 16px; }.pending-project .simulation-media { border-radius: 6px; }.simulation-caption h3 { font-size: 18px; }
-  .coecho-section { margin-top: 50px; padding-top: 58px; }.coecho-title { gap: 14px; }.coecho-logo { width: 56px; height: 56px; }.coecho-copy h2 { font-size: 38px; }.coecho-description { font-size: 17px; }.coecho-product { border-radius: 12px; }.coecho-product img { border-radius: 12px; }
+  .coecho-section { margin-top: 50px; padding-top: 58px; }.coecho-organization { gap: 9px; }.labo-logo { width: 84px; }.coecho-organization > span:nth-child(2) { font-size: 10px; }.coecho-title { gap: 14px; }.coecho-logo { width: 56px; height: 56px; }.coecho-copy h2 { font-size: 38px; }.coecho-description { font-size: 17px; }.coecho-product { border-radius: 12px; }
   .canis-section { margin-top: 45px; padding-top: 58px; padding-bottom: 45px; }.canis-title { gap: 14px; }.canis-logo { width: 56px; height: 56px; }.canis-copy h2 { font-size: 38px; }.canis-description { font-size: 17px; }.canis-product img { border-radius: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
