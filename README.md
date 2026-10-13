@@ -21,9 +21,9 @@ pnpm build
 npx --yes wrangler@latest pages deploy dist --project-name=jialu-xu --branch=main
 ```
 
-No GitHub push is required. The existing GitHub Pages workflow still publishes
-the older GitHub-hosted URL when `main` is pushed there. The site uses hash
-routes `#/` and `#/projects` on both hosts.
+No GitHub push is required. The old GitHub Pages publishing workflow has been
+disabled; new site versions are published manually with Cloudflare Direct
+Upload. The site uses hash routes `#/` and `#/projects`.
 
 ## Attribution
 
