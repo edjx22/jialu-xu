@@ -69,7 +69,11 @@ function Projects() {
       <div className="section-heading"><h2 id="simulation-title">Simulation</h2><span className="section-count">05 projects</span></div>
       <p className="suite-introduction">HornSuite — shape the wave, define the coverage. Five tools for horn and compression-driver engineering.</p>
       <div className="simulation-grid">{simulations.map(project => <article className="simulation-card" key={project.id}>
-        <div className="simulation-media simulation-glass-window"><img src={asset(project.image)} alt={project.alt} loading="lazy" /></div>
+        <div className="simulation-media simulation-glass-window"><div className={`simulation-shot simulation-shot--${project.id}`}>
+          <img src={asset(project.image)} alt={project.alt} loading="lazy" />
+          <span className="simulation-window-controls" aria-hidden="true"><i /><i /><i /></span>
+          <span className="simulation-cursor-repair" aria-hidden="true">{project.id === 'HornPhase' ? 'Flow magnitude' : project.id === 'HornDrive' ? 'Deep dome modes' : project.id === 'HornLimit' ? 'Thermal state' : ''}</span>
+        </div></div>
         <div className="simulation-caption"><div className="simulation-title"><img src={asset(project.icon)} alt="" loading="lazy" /><div><h3>{project.title}</h3><p className="simulation-tagline">{project.tagline}</p></div></div><p>{project.description}</p></div>
       </article>)}</div>
     </section>

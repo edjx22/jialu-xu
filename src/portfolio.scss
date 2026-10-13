@@ -139,6 +139,26 @@ h1, h2, h3, p { margin: 0; }
   pointer-events: none;
 }
 .simulation-glass-window img { position: relative; height: auto; border-radius: 11px; }
+.simulation-shot { position: relative; width: 100%; container-type: inline-size; overflow: hidden; border-radius: 11px; }
+.simulation-shot img { border-radius: 0; }
+.simulation-window-controls { position: absolute; z-index: 2; top: 0; left: 0; width: 6.8%; height: 5.6%; background: #fff; pointer-events: none; }
+.simulation-window-controls i { position: absolute; top: 36%; width: 11.5%; aspect-ratio: 1; border-radius: 50%; box-shadow: inset 0 0 0 .5px #0000001c; }
+.simulation-window-controls i:nth-child(1) { left: 15%; background: #ff6059; }
+.simulation-window-controls i:nth-child(2) { left: 36%; background: #ffbd2f; }
+.simulation-window-controls i:nth-child(3) { left: 57%; background: #29c840; }
+.simulation-cursor-repair { position: absolute; z-index: 2; display: none; pointer-events: none; }
+.simulation-shot--HornForm .simulation-cursor-repair { display: block; left: 86.7%; top: 13.8%; width: .22%; height: 2.2%; background: #fff; }
+.simulation-shot--HornPhase::after { content: ''; position: absolute; z-index: 1; left: 22.7%; top: 21.9%; width: 6%; height: 7%; background: radial-gradient(ellipse at center, #fff 34%, #ffffffed 52%, #ffffff00 78%); pointer-events: none; }
+.simulation-shot--HornPhase .simulation-cursor-repair { display: grid; place-items: center; left: 21.5%; top: 25.45%; width: 9.9%; height: 2.7%; border-radius: .35cqw; background: #087cf5; color: white; font: 500 .98cqw/1 -apple-system, BlinkMacSystemFont, sans-serif; white-space: nowrap; }
+.simulation-shot--HornDrive .simulation-cursor-repair,
+.simulation-shot--HornLimit .simulation-cursor-repair { display: flex; align-items: center; left: 1.85%; width: 13%; height: 3%; padding-left: 1.9cqw; border-radius: .5cqw; background: #dedede; color: #292929; font: 400 .95cqw/1 -apple-system, BlinkMacSystemFont, sans-serif; white-space: nowrap; }
+.simulation-shot--HornDrive .simulation-cursor-repair { top: 21.6%; }
+.simulation-shot--HornLimit .simulation-cursor-repair { top: 18.7%; }
+.simulation-shot--HornDrive .simulation-cursor-repair::before,
+.simulation-shot--HornLimit .simulation-cursor-repair::before { content: ''; position: absolute; left: .55cqw; width: 1.25cqw; height: 1.25cqw; background-position: center; background-repeat: no-repeat; background-size: contain; }
+.simulation-shot--HornDrive .simulation-cursor-repair::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M1 10h3l2-5 3 10 2-8 2 6 2-3h4' fill='none' stroke='%232489f5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.simulation-shot--HornLimit .simulation-cursor-repair::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M8 11.5V3.7a2 2 0 0 1 4 0v7.8a4 4 0 1 1-4 0Z' fill='none' stroke='%232489f5' stroke-width='1.5'/%3E%3Cpath d='M10 6v8' stroke='%232489f5' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.simulation-shot--HornResponse .simulation-cursor-repair { display: block; left: 75.2%; top: 51.3%; width: 5%; height: 9%; background: radial-gradient(ellipse at center, #fcfcfc 0 40%, #fcfcfce8 55%, #fcfcfc00 80%); }
 .simulation-placeholder { height: 100%; display: flex; align-items: center; justify-content: center; background: #eeece680; color: #89857b; font-size: 13px; }
 .pending-project { grid-column: 1 / -1; display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: center; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
 .pending-project .simulation-media { aspect-ratio: 1.65; border-radius: 8px; }
@@ -207,6 +227,7 @@ h1, h2, h3, p { margin: 0; }
   .simulation-glass-window { aspect-ratio: auto; padding: 9px; border-radius: 18px; }
   .simulation-glass-window::before { inset: 2px; border-radius: 15px; }
   .simulation-glass-window img { border-radius: 9px; }
+  .simulation-shot { border-radius: 9px; }
   .pending-project { grid-template-columns: 94px 1fr; gap: 16px; }.pending-project .simulation-media { border-radius: 6px; }.simulation-caption h3 { font-size: 18px; }
   .coecho-section { margin-top: 50px; padding-top: 58px; }.coecho-organization > span:first-child { font-size: 10px; }.coecho-title { gap: 14px; }.coecho-logo { width: 56px; height: 56px; }.coecho-copy h2 { font-size: 38px; }.coecho-description { font-size: 17px; }.coecho-product { padding: 7px; border-radius: 18px; }.coecho-image-crop { border-radius: 10px; }
   .canis-section { margin-top: 45px; padding-top: 58px; padding-bottom: 45px; }.canis-title { gap: 14px; }.canis-logo { width: 56px; height: 56px; }.canis-copy h2 { font-size: 38px; }.canis-description { font-size: 17px; }.canis-product img { border-radius: 10px; }
