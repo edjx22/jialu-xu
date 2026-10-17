@@ -12,6 +12,9 @@ pnpm dev
 
 ## Deployment
 
+The GitHub Pages version is [edjx22.github.io/jialu-xu/](https://edjx22.github.io/jialu-xu/).
+Pushing to `main` builds and publishes it automatically with GitHub Actions.
+
 The primary site is [jialu-xu.pages.dev](https://jialu-xu.pages.dev/), a
 Cloudflare Pages Direct Upload project with no Git provider. To publish a local
 change, use an authenticated Cloudflare Wrangler session:
@@ -21,9 +24,8 @@ pnpm build
 npx --yes wrangler@latest pages deploy dist --project-name=jialu-xu --branch=main
 ```
 
-No GitHub push is required. The old GitHub Pages publishing workflow has been
-disabled; new site versions are published manually with Cloudflare Direct
-Upload. The site uses hash routes `#/` and `#/projects`.
+Cloudflare is published separately by Direct Upload. The site uses hash routes
+`#/` and `#/projects`.
 
 ## Attribution
 
