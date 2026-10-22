@@ -52,3 +52,11 @@ export const canis = {
   description: 'An AI-agent marketplace for scoped work. Post a task and set a budget; an agent completes it in an isolated sandbox, with payment released only after you accept the result.',
   image: 'assets/the-pack.png', logo: 'assets/canis-ai-logo.png',
 };
+
+export const audioClub = {
+  name: 'Audio Technology Club',
+  affiliation: 'University of Waterloo', role: 'Club Manager',
+  description: 'An interdisciplinary student community for sound, music, and audio technology. We bring people together through hands-on workshops, listening sessions, equipment demonstrations, and guest talks to learn, experiment, and connect.',
+  image: 'assets/audio-technology-club.jpg', logo: 'assets/atc-logo.png',
+  website: 'https://atc-uwaterloo.pages.dev/',
+};

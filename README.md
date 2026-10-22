@@ -1,7 +1,8 @@
 # Jialu Xu
 
 Personal research and projects website. The public site contains the current
-About page, three selected publications, HornSuite, Coécho, and The Pack.
+About page, three selected publications, HornSuite, Coécho, The Pack, and the
+University of Waterloo Audio Technology Club.
 
 ## Local development
 

@@ -196,6 +196,16 @@ h1, h2, h3, p { margin: 0; }
 .canis-description { font-size: 19px; line-height: 1.8; color: #676055; }
 .canis-product { max-width: 100%; overflow: hidden; }
 .canis-product img { display: block; width: 100%; height: auto; border-radius: 14px; }
+.community-section { padding: 86px 0 70px; margin-top: 74px; border-top: 1px solid var(--line); }
+.community-copy { max-width: 760px; margin-bottom: 42px; }
+.community-copy .eyebrow { line-height: 1.7; }
+.community-title { display: flex; align-items: center; gap: 18px; margin: 16px 0 12px; }
+.community-logo { width: 64px; height: 64px; flex-shrink: 0; border-radius: 14px; }
+.community-title h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 500; letter-spacing: -.035em; line-height: 1.2; }
+.community-role { margin: 0 0 20px 82px; font-size: 13px; color: var(--accent); }
+.community-description { font-size: 19px; line-height: 1.8; color: #676055; }
+.community-product { display: block; max-width: 100%; overflow: hidden; }
+.community-product img { display: block; width: 100%; height: auto; border-radius: 14px; }
 .footer { display: flex; justify-content: space-between; padding: 30px 0 36px; border-top: 1px solid var(--line); font-size: 12px; color: #978b79; }
 .skip-link { position: fixed; top: -100px; left: 20px; z-index: 50; padding: 12px; background: white; border-radius: 16px; }
 .skip-link:focus { top: 20px; }
@@ -231,6 +241,7 @@ h1, h2, h3, p { margin: 0; }
   .pending-project { grid-template-columns: 94px 1fr; gap: 16px; }.pending-project .simulation-media { border-radius: 6px; }.simulation-caption h3 { font-size: 18px; }
   .coecho-section { margin-top: 50px; padding-top: 58px; }.coecho-organization > span:first-child { font-size: 10px; }.coecho-title { gap: 14px; }.coecho-logo { width: 56px; height: 56px; }.coecho-copy h2 { font-size: 38px; }.coecho-description { font-size: 17px; }.coecho-product { padding: 7px; border-radius: 18px; }.coecho-image-crop { border-radius: 10px; }
   .canis-section { margin-top: 45px; padding-top: 58px; padding-bottom: 45px; }.canis-title { gap: 14px; }.canis-logo { width: 56px; height: 56px; }.canis-copy h2 { font-size: 38px; }.canis-description { font-size: 17px; }.canis-product img { border-radius: 10px; }
+  .community-section { margin-top: 45px; padding-top: 58px; padding-bottom: 45px; }.community-title { gap: 14px; }.community-logo { width: 56px; height: 56px; }.community-role { margin-left: 70px; }.community-description { font-size: 17px; }.community-product img { border-radius: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
 @supports not (backdrop-filter: blur(10px)) { .glass { background: #f8f1e9ed; } }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import GlassNavigation from './GlassNavigation';
-import { canis, coecho, education, ongoingResearch, profile, publications, simulations } from './content';
+import { audioClub, canis, coecho, education, ongoingResearch, profile, publications, simulations } from './content';
 
 const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 function Authors({ text }: { text: string }) {
@@ -84,6 +84,16 @@ function Projects() {
     <section className="canis-section" aria-labelledby="canis-title">
       <div className="canis-copy"><p className="eyebrow">{canis.organization}</p><div className="canis-title"><img className="canis-logo" src={asset(canis.logo)} alt="" width="64" height="64" loading="lazy" /><h2 id="canis-title">{canis.name}</h2></div><p className="canis-description">{canis.description}</p></div>
       <div className="canis-product media-glass"><img src={asset(canis.image)} alt="The Pack landing page showing an AI-agent marketplace and a sample task moving through sandboxed execution" loading="lazy" /></div>
+    </section>
+    <section className="community-section" aria-labelledby="audio-club-title">
+      <div className="community-copy">
+        <p className="eyebrow">Community · {audioClub.affiliation}</p>
+        <div className="community-title"><img className="community-logo" src={asset(audioClub.logo)} alt="" width="64" height="64" loading="lazy" /><h2 id="audio-club-title">{audioClub.name}</h2></div>
+        <p className="community-role">{audioClub.role}</p>
+        <p className="community-description">{audioClub.description}</p>
+        <div className="paper-links"><a className="paper-link" href={audioClub.website} target="_blank" rel="noopener noreferrer">Visit website<span aria-hidden="true">↗</span></a></div>
+      </div>
+      <a className="community-product media-glass" href={audioClub.website} target="_blank" rel="noopener noreferrer" aria-label="Visit the Audio Technology Club website"><img src={asset(audioClub.image)} alt="Audio Technology Club homepage with monochrome acoustic wave artwork" loading="lazy" /></a>
     </section>
   </div>;
 }
